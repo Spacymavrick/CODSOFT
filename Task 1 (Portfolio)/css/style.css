@@ -35,7 +35,12 @@ header img.round-small-image {
     border-radius: 50%;
     object-fit: cover;
     margin-right: 20px;
-    border-color:#ffffff;
+    border: 3px solid beige ;
+}
+
+.heading h2{
+
+text-align: center;
 }
 .skills {
    align-content: center;
@@ -105,6 +110,7 @@ footer .social{
   text-align: center;
 }
 
+
 p{
     color: #ffffff;
 }
@@ -126,6 +132,11 @@ h2{
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   }
   
+.resume{
+  text-align: center;
+  justify-content: center;
+}
+
   .card svg {
     width: 48px;
     fill: #333;
@@ -330,3 +341,89 @@ h2{
     box-shadow: none;
     transform: scale(0.98);
   }
+
+
+
+  .wrapper{
+ 
+     display: flex;
+     margin-bottom: 20px;
+     margin-left: 350px;
+     cursor: pointer;
+     transition: all .3s ease-in;
+   
+   
+ }
+ 
+  .icon {
+
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background-image: url("../Picture/Pic2.avif");
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+      
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-image: url("../Picture/Pic2.avif");
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+.wrapper .LinkedIn:hover,
+.wrapper .LinkedIn:hover .tooltip,
+.wrapper .LinkedIn:hover .tooltip::before {
+  background: #1877F2;
+  color: #fff;
+}
+
+.wrapper .GitHub:hover,
+.wrapper .GitHub:hover .tooltip,
+.wrapper .Github:hover .tooltip::before {
+  background: #050505;
+ 
+}
